@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="eevee.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+  <script src="gifplayer.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3><center>Pokemon Eevee Pet</center></h3>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-12">
+          <style scoped>
+
+              .button-success,
+              .button-error,
+              .button-warning,
+              .button-secondary {
+                  color: white;
+                  border-radius: 4px;
+                  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+              }
+      
+              .button-success {
+                  background: rgb(28, 184, 65); /* this is a green */
+              }
+              .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+            }
+            .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+        </style>
+          <center>
+          <button onclick="playdanceVid()" type="button" class="button-secondary pure-button">Play</button>
+          <button onclick="playeatVid()" type="button" class="button-success pure-button">Feed</button>
+          <button onclick="playsleepVid()" type="button" class="button-error pure-button">Sleep</button>
+          </center>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-lg-12">
+        <center>
+        <img class="animated-gif" src="eevee standard.png" alt="">
+
+        <video class="setsleep" id="sleepVideo" width="800" height="800" onended="sleepvideoEnded()">
+          <source src="eevee sleep fix.mp4" type="video/mp4">
+          </video>
+        <video class="seteat" id="eatVideo" width="800" height="800" onended="eatvideoEnded()" >
+          <source src="eevee eat fix.mp4" type="video/mp4">
+          </video>
+        <video class="setdance" id="danceVideo" width="800" height="800" onended="playvideoEnded()">
+          <source src="eevee dance.mp4" type="video/mp4">
+          </video>
+          </center>
+        
+        <script> 
+          var eatVid = document.getElementById("eatVideo"); 
+          var danceVid = document.getElementById("danceVideo")
+          var sleepVid = document.getElementById("sleepVideo")
+
+          function playvideoEnded() {
+            danceVid.style.display="none"
+          }
+          function eatvideoEnded(){
+            eatVid.style.display="none"
+          }
+
+          function sleepvideoEnded(){
+            sleepVid.style.display="none"
+          }
+          function playeatVid() { 
+            eatVid.style.display="initial"
+            eatVid.play(); 
+          } 
+
+          function playdanceVid() {
+            danceVid.style.display="initial"
+            danceVid.play();
+          }
+
+          function playsleepVid(){
+            sleepVid.style.display="initial"
+            sleepVid.play();
+
+          }
+          
+          
+          </script> 
+      </div>
+    </div>
+  </div>
+  <footer>
+    
+      <div class="footer">
+          <p>music used: https://www.youtube.com/watch?v=wR3gaYTqkDQ </p>
+          <p> sound used: https://www.youtube.com/watch?v=zGkL-yhBYlk </p>
+          <p> site used to make pictures: https://www.pixilart.com/ </p>
+        </div>>
+    </footer>
+</body>
+
+      
+    
+  </html>
